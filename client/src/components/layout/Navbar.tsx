@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Cpu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 export default function Navbar() {
@@ -18,7 +18,7 @@ export default function Navbar() {
   const navLinks = [
     { name: 'About', href: '#about' },
     { name: 'Experience', href: '#experience' },
-    { name: 'Work', href: '#projects' },
+    { name: 'Projects', href: '#projects' },
     { name: 'Contact', href: '#contact' },
   ];
 
@@ -32,13 +32,14 @@ export default function Navbar() {
 
   return (
     <nav 
-      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 ${
-        scrolled ? 'bg-background/80 backdrop-blur-md border-b border-white/5 py-4' : 'bg-transparent py-6'
+      className={`fixed top-0 left-0 w-full z-40 transition-all duration-300 border-b ${
+        scrolled ? 'bg-black/90 backdrop-blur-md border-red-900/30 py-4' : 'bg-transparent border-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-6 flex justify-between items-center">
-        <a href="#" className="text-2xl font-display font-bold text-white tracking-widest text-glow">
-          NEXUS<span className="text-primary">.DEV</span>
+        <a href="#" className="flex items-center gap-2 text-xl font-display font-bold text-white tracking-widest group">
+          <Cpu className="text-red-600 group-hover:animate-pulse" />
+          <span>CYBER<span className="text-red-600">.FOLIO</span></span>
         </a>
 
         {/* Desktop Nav */}
@@ -47,23 +48,24 @@ export default function Navbar() {
             <button
               key={link.name}
               onClick={() => scrollToSection(link.href)}
-              className="text-sm font-heading uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors hover:text-glow"
+              className="text-xs font-mono uppercase tracking-widest text-gray-400 hover:text-red-500 transition-colors relative group"
             >
-              {link.name}
+              <span className="relative z-10">{link.name}</span>
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-red-600 transition-all duration-300 group-hover:w-full" />
             </button>
           ))}
           <Button 
             variant="outline" 
-            className="border-primary text-primary hover:bg-primary/10 font-heading uppercase tracking-widest rounded-none"
+            className="border-red-600 text-red-500 hover:bg-red-600 hover:text-white font-mono text-xs uppercase tracking-widest rounded-none h-8 px-6 transition-all"
             onClick={() => window.open('/resume.pdf', '_blank')}
           >
-            Resume
+            [ Resume ]
           </Button>
         </div>
 
         {/* Mobile Nav Toggle */}
         <button 
-          className="md:hidden text-white"
+          className="md:hidden text-white hover:text-red-500 transition-colors"
           onClick={() => setIsOpen(!isOpen)}
         >
           {isOpen ? <X /> : <Menu />}
@@ -77,24 +79,17 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: '100vh' }}
             exit={{ opacity: 0, height: 0 }}
-            className="md:hidden absolute top-full left-0 w-full bg-background border-t border-white/5 overflow-hidden flex flex-col items-center justify-center gap-8"
+            className="md:hidden absolute top-full left-0 w-full bg-black border-t border-red-900/30 overflow-hidden flex flex-col items-center justify-center gap-8 z-50"
           >
             {navLinks.map((link) => (
               <button
                 key={link.name}
                 onClick={() => scrollToSection(link.href)}
-                className="text-2xl font-display text-white hover:text-primary transition-colors"
+                className="text-2xl font-display text-white hover:text-red-500 transition-colors"
               >
                 {link.name}
               </button>
             ))}
-            <Button 
-              variant="outline" 
-              className="mt-4 border-primary text-primary hover:bg-primary/10"
-              onClick={() => window.open('/resume.pdf', '_blank')}
-            >
-              Resume
-            </Button>
           </motion.div>
         )}
       </AnimatePresence>
