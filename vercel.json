@@ -9,6 +9,7 @@
   ],
   "routes": [
     { "src": "^/api/(.*)", "dest": "/api/$1" },
+    { "handle": "filesystem" },
     { "src": "/(.*)", "dest": "/dist/public/$1" }
   ],
   "headers": [
@@ -19,7 +20,7 @@
       ]
     },
     {
-      "source": "/(.*\.html)",
+      "source": "/(.*\\.html)",
       "headers": [
         { "key": "Content-Type", "value": "text/html; charset=utf-8" }
       ]
