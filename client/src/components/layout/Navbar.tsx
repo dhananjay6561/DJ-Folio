@@ -39,7 +39,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex justify-between items-center">
         <a href="#" className="flex items-center gap-2 text-xl font-display font-bold text-white tracking-widest group">
           <Cpu className="text-red-600 group-hover:animate-pulse" />
-          <span>CYBER<span className="text-red-600">.FOLIO</span></span>
+          <span>DJ<span className="text-red-600">.PORTFOLIO</span></span>
         </a>
 
         {/* Desktop Nav */}

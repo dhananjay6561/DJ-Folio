@@ -1,3 +1,5 @@
+import { useState } from 'react';
+import { AnimatePresence } from 'framer-motion';
 import Scanline from '@/components/layout/Scanline';
 import Grain from '@/components/layout/Grain';
 import Navbar from '@/components/layout/Navbar';
@@ -10,25 +12,38 @@ import Achievements from '@/components/sections/Achievements';
 import Certifications from '@/components/sections/Certifications';
 import Education from '@/components/sections/Education';
 import Contact from '@/components/sections/Contact';
+import LoadingScreen from '@/components/layout/LoadingScreen';
+import ScrollToTop from '@/components/layout/ScrollToTop';
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div className="min-h-screen bg-black text-foreground overflow-hidden selection:bg-red-500/30 selection:text-red-100">
-      <Scanline />
-      <Grain />
-      <Navbar />
+      <AnimatePresence mode="wait">
+        {isLoading && <LoadingScreen onComplete={() => setIsLoading(false)} />}
+      </AnimatePresence>
       
-      <main>
-        <Hero />
-        <About />
-        <Experience />
-        <TechStack />
-        <Projects />
-        <Achievements />
-        <Certifications />
-        <Education />
-        <Contact />
-      </main>
+      {!isLoading && (
+        <>
+          <Scanline />
+          <Grain />
+          <Navbar />
+          <ScrollToTop />
+          
+          <main>
+            <Hero />
+            <About />
+            <Experience />
+            <TechStack />
+            <Projects />
+            <Achievements />
+            <Certifications />
+            <Education />
+            <Contact />
+          </main>
+        </>
+      )}
     </div>
   );
 }

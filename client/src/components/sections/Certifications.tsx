@@ -2,24 +2,24 @@ import { motion } from 'framer-motion';
 import { FileCode, Database, Shield } from 'lucide-react';
 
 const certs = [
-  {
-    name: "Certified Kubernetes Administrator",
-    org: "The Linux Foundation",
-    id: "CKA-19230-23",
-    icon: Database
-  },
-  {
-    name: "AWS Certified Security - Specialty",
-    org: "Amazon Web Services",
-    id: "AWS-SEC-9921",
-    icon: Shield
-  },
-  {
-    name: "Meta Frontend Developer Professional",
-    org: "Meta",
-    id: "META-FE-8821",
-    icon: FileCode
-  }
+  // {
+  //   name: "Certified Kubernetes Administrator",
+  //   org: "The Linux Foundation",
+  //   id: "CKA-19230-23",
+  //   icon: Database
+  // },
+  // {
+  //   name: "AWS Certified Security - Specialty",
+  //   org: "Amazon Web Services",
+  //   id: "AWS-SEC-9921",
+  //   icon: Shield
+  // },
+  // {
+  //   name: "Meta Frontend Developer Professional",
+  //   org: "Meta",
+  //   id: "META-FE-8821",
+  //   icon: FileCode
+  // }
 ];
 
 export default function Certifications() {
@@ -32,11 +32,11 @@ export default function Certifications() {
           viewport={{ once: true }}
           className="max-w-4xl mx-auto"
         >
-          <div className="inline-block border border-red-500/30 px-3 py-1 mb-8">
+          {/* <div className="inline-block border border-red-500/30 px-3 py-1 mb-8">
             <h2 className="text-sm font-mono text-red-500 tracking-[0.3em] uppercase">
               Credentials_Log
             </h2>
-          </div>
+          </div> */}
 
           <div className="space-y-4">
             {certs.map((cert, index) => (

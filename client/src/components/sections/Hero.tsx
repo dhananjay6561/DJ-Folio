@@ -13,11 +13,11 @@ function MovingParticles() {
     const temp = [];
     for (let i = 0; i < count; i++) {
       const t = Math.random() * 100;
-      const factor = 20 + Math.random() * 100;
-      const speed = 0.01 + Math.random() / 200;
-      const xFactor = -50 + Math.random() * 100;
-      const yFactor = -50 + Math.random() * 100;
-      const zFactor = -50 + Math.random() * 100;
+      const factor = 20 + Math.random() * 400; //to decrease the spread of the particles, increase the multiplier
+      const speed = 0.01 + Math.random() / 50; //to decrease the speed, decrease the divisor
+      const xFactor = -50 + Math.random() * 400; //to decrease the spread of the particles, increase the multiplier
+      const yFactor = -50 + Math.random() * 100; //to decrease the spread of the particles, increase the multiplier
+      const zFactor = -50 + Math.random() * 400; //to decrease the spread of the particles, increase the multiplier
       temp.push({ t, factor, speed, xFactor, yFactor, zFactor, mx: 0, my: 0 });
     }
     return temp;
@@ -82,14 +82,14 @@ const textVariants = {
   })
 };
 
-const word = "CYBER_ARCHITECT";
+const word = "DHANANJAY";
 
 export default function Hero() {
   return (
     <section className="relative w-full h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* 3D Background */}
       <div className="absolute inset-0 z-0 opacity-80">
-        <Canvas camera={{ position: [0, 0, 20], fov: 60 }}>
+        <Canvas camera={{ position: [0, 0, 20], fov: 60 }}> {/* fov adjusted for better view */}
           <Scene />
         </Canvas>
       </div>
@@ -134,7 +134,7 @@ export default function Hero() {
           transition={{ delay: 1.5, duration: 1 }}
         >
           <h2 className="text-xl md:text-2xl font-heading text-red-500 tracking-[0.5em] uppercase mb-12 text-glow">
-            Full Stack Engineering // 3D Experiences
+            Full Stack / Core SDE / Gen AI
           </h2>
         </motion.div>
 
@@ -173,11 +173,13 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2.5 }}
-        className="absolute left-10 bottom-10 hidden md:flex flex-col gap-4 font-mono text-xs text-red-500/70"
+        className="absolute left-10 bottom-10 hidden md:flex flex-col gap-4 font-mono text-xs text-red-500 font-bold z-20"
       >
-        <a href="#" className="hover:text-red-400 hover:translate-x-2 transition-all">GH :: GITHUB.COM/DEV</a>
-        <a href="#" className="hover:text-red-400 hover:translate-x-2 transition-all">LI :: LINKEDIN.COM/IN/DEV</a>
-        <a href="#" className="hover:text-red-400 hover:translate-x-2 transition-all">TW :: TWITTER.COM/DEV</a>
+        <a href="https://github.com/dhananjay6561" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:translate-x-2 transition-all text-glow">GH :: GITHUB.COM/DHANANJAY6561</a>
+        <a href="https://www.linkedin.com/in/dhananjay6561/" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:translate-x-2 transition-all text-glow">LI :: LINKEDIN.COM/IN/DHANANJAY6561</a>
+        <a href="https://medium.com/@dhananjayaggarwal6561" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:translate-x-2 transition-all text-glow">MD :: MEDIUM.COM/@DHANANJAY6561</a>
+        <a href="https://leetcode.com/u/dhananjay6561/" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:translate-x-2 transition-all text-glow">LC :: LEETCODE.COM/U/DHANANJAY6561</a>
+        <a href="https://linktr.ee/Dj6561" target="_blank" rel="noopener noreferrer" className="hover:text-white hover:translate-x-2 transition-all text-glow">LT :: LINKTR.EE/DJ6561</a>
       </motion.div>
 
       {/* Scroll Indicator */}

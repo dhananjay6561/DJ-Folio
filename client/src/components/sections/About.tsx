@@ -33,7 +33,7 @@ export default function About() {
               <div className="relative bg-card border border-white/10 p-2 rounded-lg">
                 <div className="aspect-square bg-muted rounded overflow-hidden">
                   <img 
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=1000&auto=format&fit=crop" 
+                    src="/photo.png" 
                     alt="Profile" 
                     className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
                   />

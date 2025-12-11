@@ -1,19 +1,34 @@
 import { motion } from 'framer-motion';
-import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiThreedotjs, SiNodedotjs, SiPostgresql, SiPython, SiDocker, SiAmazon, SiRust, SiGraphql } from 'react-icons/si';
+import { SiReact, SiNextdotjs, SiTypescript, SiTailwindcss, SiNodedotjs, SiPostgresql, SiPython, SiDocker, SiAmazon, SiJavascript, SiMongodb, SiMysql, SiGit, SiLinux, SiKubernetes, SiTerraform } from 'react-icons/si';
+import { FaJava, FaDatabase, FaNetworkWired, FaCubes, FaServer, FaProjectDiagram, FaCode } from 'react-icons/fa';
+import { VscVscode } from 'react-icons/vsc';
 
 const skills = [
-  { name: "React", icon: SiReact, color: "#61DAFB" },
-  { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
-  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
-  { name: "Tailwind", icon: SiTailwindcss, color: "#06B6D4" },
-  { name: "Three.js", icon: SiThreedotjs, color: "#ffffff" },
-  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
-  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
-  { name: "GraphQL", icon: SiGraphql, color: "#E10098" },
+  { name: "Java", icon: FaJava, color: "#007396" },
   { name: "Python", icon: SiPython, color: "#3776AB" },
+  { name: "JavaScript", icon: SiJavascript, color: "#F7DF1E" },
+  { name: "TypeScript", icon: SiTypescript, color: "#3178C6" },
+  { name: "React.js", icon: SiReact, color: "#61DAFB" },
+  { name: "Next.js", icon: SiNextdotjs, color: "#ffffff" },
+  { name: "Node.js", icon: SiNodedotjs, color: "#339933" },
+  { name: "Express.js", icon: SiNodedotjs, color: "#000000" },
+  { name: "TailwindCSS", icon: SiTailwindcss, color: "#06B6D4" },
+  { name: "MongoDB", icon: SiMongodb, color: "#47A248" },
+  { name: "MySQL", icon: SiMysql, color: "#4479A1" },
+  { name: "PostgreSQL", icon: SiPostgresql, color: "#4169E1" },
   { name: "Docker", icon: SiDocker, color: "#2496ED" },
+  { name: "Kubernetes", icon: SiKubernetes, color: "#326CE5" },
+  { name: "Terraform", icon: SiTerraform, color: "#7B42BC" },
   { name: "AWS", icon: SiAmazon, color: "#FF9900" },
-  { name: "Rust", icon: SiRust, color: "#000000" }
+  { name: "Git", icon: SiGit, color: "#F05032" },
+  { name: "Linux", icon: SiLinux, color: "#FCC624" },
+  { name: "VS Code", icon: VscVscode, color: "#007ACC" },
+  { name: "DSA", icon: FaCode, color: "#FF5733" },
+  { name: "OOP", icon: FaCubes, color: "#FF33A1" },
+  { name: "DBMS", icon: FaDatabase, color: "#33FF57" },
+  { name: "Networks", icon: FaNetworkWired, color: "#3357FF" },
+  { name: "OS", icon: FaServer, color: "#A133FF" },
+  { name: "System Design", icon: FaProjectDiagram, color: "#FF3333" }
 ];
 
 export default function TechStack() {

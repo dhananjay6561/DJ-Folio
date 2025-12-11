@@ -22,12 +22,11 @@ export default function Education() {
              
              <div className="relative z-10 space-y-8">
                <div>
-                 <h3 className="text-2xl font-heading font-bold text-white">Bachelor of Science in Computer Science</h3>
-                 <p className="text-primary font-mono text-lg mt-1">University of Technology</p>
-                 <p className="text-muted-foreground mt-2">2015 - 2019</p>
+                 <h3 className="text-2xl font-heading font-bold text-white">Bachelor of Technology, Information Technology</h3>
+                 <p className="text-primary font-mono text-lg mt-1">Guru Gobind Singh Indraprastha University, New Delhi</p>
+                 <p className="text-muted-foreground mt-2">2022 – 2026</p>
                  <p className="mt-4 text-gray-400">
-                   Specialized in Artificial Intelligence and Human-Computer Interaction. 
-                   Graduated with Honors. Vice President of the Computer Science Society.
+                   CGPA: 8.47
                  </p>
                </div>
              </div>
